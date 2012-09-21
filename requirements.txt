@@ -22,7 +22,6 @@ django-pylibmc-sasl==0.2.4
 
 # -e src/facebook-python-sdk-322930c
 # -e .
-# --extra-index-url=http://dist.pinaxproject.com/dev/ -e ../myplants
 
 # For storing images on S3.
 django-storages==1.1.4
