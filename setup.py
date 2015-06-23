@@ -2,9 +2,9 @@ from distutils.core import setup
 from setuptools import find_packages
 
 requirements = [
-    'django==1.5',
+    'django==1.6.11',
 
-    'PIL',
+    'Pillow',
     'South==0.7.6',
     'cssselect',
     'django-debug-toolbar',
@@ -34,7 +34,7 @@ requirements = [
 
     'django-facebook-connect>=1.0.2',
     'django-recaptcha==0.0.4',
-    'django-registration==0.8',
+    'django-registration-redux==1.2',
 
     # For storing images on S3.
 
