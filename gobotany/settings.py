@@ -22,7 +22,7 @@ ALLOWED_HOSTS = ['.newenglandwild.org', # any subdomain of newenglandwild.org
                 ]
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_ROOT, 'templates')
+    os.path.join(PROJECT_ROOT, 'templates'),
 )
 
 # We define these database specifications as constants, so that we can
@@ -128,7 +128,6 @@ INSTALLED_APPS = [
     'tinymce',
     'facebook_connect',
     'registration',
-    'south',
     'captcha',
     ]
 MIDDLEWARE_CLASSES = (

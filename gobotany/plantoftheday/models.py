@@ -112,7 +112,7 @@ class PlantOfTheDay(models.Model):
 
     class Meta:
         # Defining app_label changes the heading in the Admin successfully
-        # once tables are created, but interferes with syncdb table
+        # once tables are created, but interferes with table
         # creation as an unfortunate side effect.
         # Custom app labels in the Admin will be in a future Django version
         # according to a comment at http://ionelmc.wordpress.com/2011/06/24/

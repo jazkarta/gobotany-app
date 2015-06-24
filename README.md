@@ -101,7 +101,7 @@ exception, because the database tables that it needs have not yet been
 created.  To set up the database, run these commands:
 
     heroku config:add DJANGO_SETTINGS_MODULE=gobotany.settings
-    heroku run django-admin.py syncdb --noinput
+    heroku run django-admin.py migrate --noinput
     heroku run python -m gobotany.core.importer zipimport
     heroku run bin/import-images.sh
     heroku run bin/import-dkey.sh
