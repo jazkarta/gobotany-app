@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl: '/static/scripts',
+    baseUrl: '.',
     paths: {
         'bridge': 'bridge',
         'dkey': 'dkey',

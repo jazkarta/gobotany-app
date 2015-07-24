@@ -190,7 +190,7 @@ define([
     };
 
     Choice.prototype._draw_specifics = function() {
-        var BLANK_IMAGE = '/static/images/layout/transparent.png';
+        var BLANK_IMAGE = STATIC_URL + 'images/layout/transparent.png';
         var CHOICES_PER_ROW = 5;
         var choices_class = 'choices';
         var checked = function(cond) {return cond ? ' checked' : ''};

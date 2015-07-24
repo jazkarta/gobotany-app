@@ -4,8 +4,8 @@ define([
 ], function ($, jqueryForm) {
 
     var EMPTY_FILE_PATH = 'None Selected';
-    var EMPTY_IMAGE_URL = '/static/images/icons/no-image.png';
-    var LOADING_IMAGE_URL = '/static/images/icons/preloaders-dot-net-lg.gif';
+    var EMPTY_IMAGE_URL = STATIC_URL + 'images/icons/no-image.png';
+    var LOADING_IMAGE_URL = STATIC_URL + 'images/icons/preloaders-dot-net-lg.gif';
 
     function resize(image, $thumbnail_element) {
         var MAX_WIDTH = 1000;

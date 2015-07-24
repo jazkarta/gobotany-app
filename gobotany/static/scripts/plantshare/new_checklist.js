@@ -9,7 +9,7 @@ define([
 ], function ($, jqueryUI, Shadowbox, formset, Suggester, ChecklistForm,
     upload_modal) {
     
-    var UPLOAD_SPINNER = '/static/images/icons/preloaders-dot-net-lg.gif';
+    var UPLOAD_SPINNER = STATIC_URL + 'images/icons/preloaders-dot-net-lg.gif';
 
     var notes_modal = '' +
     '<div id="container" class="notes-modal">' +

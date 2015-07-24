@@ -106,7 +106,7 @@ define([
             if (image !== undefined) {
                 html += '<a href="' + image.large_thumb_url + '" ' +
                         'title="Photo">' +
-                        '<img src="/static/images/icons/icon-camera.png" ' +
+                        '<img src="' + STATIC_URL + 'images/icons/icon-camera.png" ' +
                         'alt=""></a>';
             }
             html += plant.scientific_name + '</td>';

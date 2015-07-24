@@ -7,8 +7,8 @@ define([
     'util/shadowbox_init'
 ], function ($, upload_modal, Shadowbox) {
 
-    var UPLOAD_SPINNER = '/static/images/icons/preloaders-dot-net-lg.gif';
-    var DELETE_ICON = '/static/images/icons/close.png';
+    var UPLOAD_SPINNER = STATIC_URL + 'images/icons/preloaders-dot-net-lg.gif';
+    var DELETE_ICON = STATIC_URL + 'images/icons/close.png';
 
     $(document).ready(function () {
 

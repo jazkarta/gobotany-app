@@ -21,7 +21,7 @@ define([
 		'</section>' +
 	'</div><!--!/#container -->';
 
-    var UPLOAD_SPINNER = '/static/images/icons/preloaders-dot-net-lg.gif';
+    var UPLOAD_SPINNER = STATIC_URL +'images/icons/preloaders-dot-net-lg.gif';
 
     $(document).ready(function() {
 

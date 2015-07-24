@@ -106,23 +106,23 @@ define([
             var mc_options = {
                 styles: [{
                     height: sizes[0],
-                    url: BASE + host + '/static/images/icons/m1.png',
+                    url: STATIC_URL + 'images/icons/m1.png',
                     width: sizes[0]
                 }, {
                     height: sizes[1],
-                    url: BASE + host + '/static/images/icons/m2.png',
+                    url: STATIC_URL + 'images/icons/m2.png',
                     width: sizes[1]
                 }, {
                     height: sizes[2],
-                    url: BASE + host + '/static/images/icons/m3.png',
+                    url: STATIC_URL + 'images/icons/m3.png',
                     width: sizes[2]
                 }, {
                     height: sizes[3],
-                    url: BASE + host + '/static/images/icons/m4.png',
+                    url: STATIC_URL + 'images/icons/m4.png',
                     width: sizes[3]
                 }, {
                     height: sizes[4],
-                    url: BASE + host + '/static/images/icons/m5.png',
+                    url: STATIC_URL + 'images/icons/m5.png',
                     width: sizes[4]
                 }
             ]};
@@ -215,14 +215,14 @@ define([
                                                         title) {
         // Create a marker in a secondary color to mark a landmark.
         var BASE = '//';   // base for protocol-relative URL
-        var pin_image = new google_maps.MarkerImage(BASE +
-            location.host + "/static/images/icons/marker-pin-gray.png",
+        var pin_image = new google_maps.MarkerImage(
+            STATIC_URL + "images/icons/marker-pin-gray.png",
             new google.maps.Size(20, 34),
             new google.maps.Point(0, 0),
             new google.maps.Point(10, 34)
         );
-        var pin_shadow = new google_maps.MarkerImage(BASE +
-            location.host + "/static/images/icons/marker-pin-shadow.png",
+        var pin_shadow = new google_maps.MarkerImage(
+            STATIC_URL + "images/icons/marker-pin-shadow.png",
             new google.maps.Size(40, 37),
             new google.maps.Point(0, 0),
             new google.maps.Point(12, 35)
