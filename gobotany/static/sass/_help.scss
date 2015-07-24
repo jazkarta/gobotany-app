@@ -43,23 +43,23 @@ $image-box-shadow-color: rgba(0, 0, 0, 0.6);
     .first.question {
         margin: 11px 0 0 0;
         border-top: 1px solid #e2dfcb;
-        background-image: url(/static/images/icons/1.png);	
+        background-image: url(../images/icons/1.png);	
     }
     .second.question {
-        background-image: url(/static/images/icons/2.png);	
+        background-image: url(../images/icons/2.png);	
     }
     .third.question {
-        background-image: url(/static/images/icons/3.png);	
+        background-image: url(../images/icons/3.png);	
     }
     .fourth.question {
-        background-image: url(/static/images/icons/4.png);	
+        background-image: url(../images/icons/4.png);	
     }
     .fifth.question {
-        background-image: url(/static/images/icons/5.png);	
+        background-image: url(../images/icons/5.png);	
     }
     .sixth.question {
         margin: 0 0 11px 0;
-        background-image: url(/static/images/icons/6.png);	
+        background-image: url(../images/icons/6.png);	
     }
     a {
         &.screenshot {
@@ -215,12 +215,12 @@ $image-box-shadow-color: rgba(0, 0, 0, 0.6);
         }
     }
     p.video {
-    	background: url(/static/images/icons/icon3.png) left 4px no-repeat transparent;
+    	background: url(../images/icons/icon3.png) left 4px no-repeat transparent;
 	    margin: 2px 0;
 	    padding: 3px 0 0 22px;
     }
     p.list {
-	    background: url(/static/images/icons/icon1.png) left 4px no-repeat transparent;
+	    background: url(../images/icons/icon1.png) left 4px no-repeat transparent;
 	    margin: 2px 0 0;
 	    padding: 3px 0 0 22px;
     }
@@ -338,13 +338,13 @@ $image-box-shadow-color: rgba(0, 0, 0, 0.6);
 
 #system-requirements #main {
     p + div {
-        background-image: url(/static/images/layout/screen-desktop-laptop.svg);
+        background-image: url(../images/layout/screen-desktop-laptop.svg);
         background-position: top 9px left;
         background-repeat: no-repeat;
         background-size: 173px 121px;
     }
     div + div {
-        background-image: url(/static/images/layout/screen-tablet.svg), url(/static/images/layout/screen-smartphone.svg);
+        background-image: url(../images/layout/screen-tablet.svg), url(../images/layout/screen-smartphone.svg);
         background-position: top 9px left 20px, top 9px left 122px;
         background-repeat: no-repeat, no-repeat;
         background-size: 74px 98px, 30px 57px;

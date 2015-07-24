@@ -28,7 +28,7 @@
 
 body {
     background-color: #f0f0c0;
-    background-image: url(/static/images/layout/little-plants.png);    
+    background-image: url(../images/layout/little-plants.png);    
     background-position: bottom 140px center;
     background-repeat: no-repeat;
     color: $text-color;
@@ -272,7 +272,7 @@ header {
         padding: 14px 0 0 0;
         width: 443px;
         a {
-            background: url(/static/images/layout/logo-app.png) no-repeat transparent;
+            background: url(../images/layout/logo-app.png) no-repeat transparent;
             height: 65px;
             width: 443px;
             @include offscreen;
@@ -281,14 +281,14 @@ header {
     .newfs {
         float: right;
         a {
-            background: url(/static/images/layout/newfs-logo-app.png) no-repeat transparent;
+            background: url(../images/layout/newfs-logo-app.png) no-repeat transparent;
             height: 66px;
             width: 116px;
             @include offscreen;
         }
     }
     nav {
-        background: url(/static/images/layout/nav-app-green.png) no-repeat;
+        background: url(../images/layout/nav-app-green.png) no-repeat;
         background-position: 0px 79px;
         font-family: $headings-font;
         height: 120px;
@@ -320,7 +320,7 @@ header {
             }
         }
         #search {
-            background: #fff url(/static/images/layout/search-left.png) left center no-repeat;
+            background: #fff url(../images/layout/search-left.png) left center no-repeat;
             float: right;
             height: 20px;
             margin: 4px 4px 0 0;
@@ -346,7 +346,7 @@ header {
                 }
             }                
             button {
-                background: $link-green url(/static/images/layout/search-btn.png) 0 0 no-repeat;
+                background: $link-green url(../images/layout/search-btn.png) 0 0 no-repeat;
                 border: none;
                 cursor: pointer;
                 float: right;
@@ -367,7 +367,7 @@ header {
     padding: 8px 0 0;
     @include container-div;
     #main {
-        background: url(/static/images/layout/sidebar-bg.png) repeat-y;
+        background: url(../images/layout/sidebar-bg.png) repeat-y;
         float: right;
         min-height: 545px;
         padding-bottom: 24px;
@@ -421,7 +421,7 @@ header {
             padding-top: $sidebar-box-vertical-padding;
         }
         &.plant-map {
-            background: url(/static/images/layout/plant-map.png) 95% 1% no-repeat;
+            background: url(../images/layout/plant-map.png) 95% 1% no-repeat;
             padding: 0 25px 16px 16px;
         }
         .left {
@@ -562,7 +562,7 @@ footer {
 
 /* Wait spinners */
 .wait-spinner {
-    background: url(/static/images/icons/preloaders-dot-net-lg.gif)
+    background: url(../images/icons/preloaders-dot-net-lg.gif)
         no-repeat scroll center center transparent;
     height: 350px;
     margin: auto;
@@ -615,10 +615,10 @@ footer {
             text-indent: -9000px;	
             width: 32px;
             &.next {
-	            background: url(/static/images/icons/next-larger.png) 0 0 no-repeat transparent;	
+	            background: url(../images/icons/next-larger.png) 0 0 no-repeat transparent;	
             }
             &.prev {
-	            background: url(/static/images/icons/prev-larger.png) 0 0 no-repeat transparent;	
+	            background: url(../images/icons/prev-larger.png) 0 0 no-repeat transparent;	
             }
             &.disabled {
                 cursor: default;

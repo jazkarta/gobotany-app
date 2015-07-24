@@ -2,15 +2,15 @@
 
 #home {
     background-color: #f3f3c3;
-    background-image: url(/static/images/layout/body-home.jpg);
+    background-image: url(../images/layout/body-home.jpg);
     background-position: left 0px top;
     background-repeat: repeat-x;
     #all {
-        background: url(/static/images/layout/content-home-bg.jpg) center 72px no-repeat transparent;
+        background: url(../images/layout/content-home-bg.jpg) center 72px no-repeat transparent;
     }
     header {
         h1 {
-            background: url(/static/images/branding/logo-toplevel.png) no-repeat transparent;
+            background: url(../images/branding/logo-toplevel.png) no-repeat transparent;
             float: left;
             margin: 0 0 0 67px;
             height: 107px;
@@ -18,12 +18,12 @@
             @include offscreen;
         }
         .newfs a {
-            background: url(/static/images/branding/newfs-logo-toplevel.png) no-repeat transparent;
+            background: url(../images/branding/newfs-logo-toplevel.png) no-repeat transparent;
             height: 88px;
             width: 160px;
         }
         nav {
-            background: url(/static/images/layout/nav-toplevel.png) center 107px no-repeat;
+            background: url(../images/layout/nav-toplevel.png) center 107px no-repeat;
             height: 160px;
             padding: 0 0 0 19px;
             li {
@@ -90,7 +90,7 @@
         z-index: 50;
     }
     .three-col {
-        background: url(/static/images/layout/dot.png) right top repeat-y;
+        background: url(../images/layout/dot.png) right top repeat-y;
         float: left;
         height: 240px;
         margin: 354px 23px 5px 0;
@@ -121,7 +121,7 @@
     }
     a {
         &.subscribe {
-            background: url(/static/images/layout/subscribe.png) 0 0 no-repeat;
+            background: url(../images/layout/subscribe.png) 0 0 no-repeat;
             cursor: pointer;
             height: 16px;
             width: 87px;

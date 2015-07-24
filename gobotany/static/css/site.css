@@ -1,10 +1,11 @@
-/* *** Go Botany master styles file ***
+@charset "UTF-8";
+/*! *** Go Botany master styles file ***
  Please edit only the .scss source and use Compass to auto-generate the .css.
  The generated .css is kept in the repository to allow easy deployment.
  */
 /* First are some SASS "partials" for external and third-party styles. The goal is to keep all styles in just one deployed CSS file, site.css. Later on in this file, other partials are imported for styles specific to a site feature. A final partial, site-media-queries, is imported last in this file. */
 /* Imports for browser baseline, tools */
-/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 8/9. */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
@@ -186,16 +187,16 @@ div.sb-message a:link, div.sb-message a:visited { color: #fff; text-decoration: 
 
 /* You can alter this CSS in order to give SmoothDivScroll your own look'n'feel */
 /* Invisible left hotspot */
-div.scrollingHotSpotLeft { 	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */ min-width: 75px; width: 10%; height: 100%; 	/* There is a big background image and it's used to solve some problems I experienced in Internet Explorer 6. */ background-image: url(/static/images/smoothDivScroll/big_transparent.gif); background-repeat: repeat; background-position: center center; position: absolute; z-index: 200; left: 0; /*  The first url is for Firefox and other browsers, the second is for Internet Explorer */ cursor: url(/static/images/smoothDivScroll/cursors/cursor_arrow_left.png), url(../images/smoothDivScroll/cursors/cursor_arrow_left.png), w-resize; }
+div.scrollingHotSpotLeft { 	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */ min-width: 75px; width: 10%; height: 100%; 	/* There is a big background image and it's used to solve some problems I experienced in Internet Explorer 6. */ background-image: url(../images/smoothDivScroll/big_transparent.gif); background-repeat: repeat; background-position: center center; position: absolute; z-index: 200; left: 0; /*  The first url is for Firefox and other browsers, the second is for Internet Explorer */ cursor: url(../images/smoothDivScroll/cursors/cursor_arrow_left.png), url(../images/smoothDivScroll/cursors/cursor_arrow_left.png), w-resize; }
 
 /* Visible left hotspot */
-div.scrollingHotSpotLeftVisible { background-image: url(/static/images/smoothDivScroll/arrow_left.gif); background-color: #fff; background-repeat: no-repeat; opacity: 0.35; /* Standard CSS3 opacity setting */ -moz-opacity: 0.35; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */ filter: alpha(opacity=35); /* Opacity for Internet Explorer. */ }
+div.scrollingHotSpotLeftVisible { background-image: url(../images/smoothDivScroll/arrow_left.gif); background-color: #fff; background-repeat: no-repeat; opacity: 0.35; /* Standard CSS3 opacity setting */ -moz-opacity: 0.35; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */ filter: alpha(opacity=35); /* Opacity for Internet Explorer. */ }
 
 /* Invisible right hotspot */
-div.scrollingHotSpotRight { min-width: 75px; width: 10%; height: 100%; background-image: url(/static/images/smoothDivScroll/big_transparent.gif); background-repeat: repeat; background-position: center center; position: absolute; z-index: 200; right: 0; cursor: url(/static/images/smoothDivScroll/cursors/cursor_arrow_right.png), url(../images/smoothDivScroll/cursors/cursor_arrow_right.png), e-resize; }
+div.scrollingHotSpotRight { min-width: 75px; width: 10%; height: 100%; background-image: url(../images/smoothDivScroll/big_transparent.gif); background-repeat: repeat; background-position: center center; position: absolute; z-index: 200; right: 0; cursor: url(../images/smoothDivScroll/cursors/cursor_arrow_right.png), url(../images/smoothDivScroll/cursors/cursor_arrow_right.png), e-resize; }
 
 /* Visible right hotspot */
-div.scrollingHotSpotRightVisible { background-image: url(/static/images/smoothDivScroll/arrow_right.gif); background-color: #fff; background-repeat: no-repeat; opacity: 0.35; filter: alpha(opacity=35); -moz-opacity: 0.35; }
+div.scrollingHotSpotRightVisible { background-image: url(../images/smoothDivScroll/arrow_right.gif); background-color: #fff; background-repeat: no-repeat; opacity: 0.35; filter: alpha(opacity=35); -moz-opacity: 0.35; }
 
 /* The scroll wrapper is always the same width and height as the containing element (div). Overflow is hidden because you don't want to show all of the scrollable area.
 */
@@ -242,7 +243,7 @@ div.scrollableArea { position: relative; width: auto; height: 100%; }
 #main div.popup a:hover { color: #35661c; }
 
 /* Site-wide styles */
-body { background-color: #f0f0c0; background-image: url(/static/images/layout/little-plants.png); background-position: bottom 140px center; background-repeat: no-repeat; color: black; font-family: Verdana, Geneva, "Lucida Sans Unicode", sans-serif; font-size: 12px; }
+body { background-color: #f0f0c0; background-image: url(../images/layout/little-plants.png); background-position: bottom 140px center; background-repeat: no-repeat; color: black; font-family: Verdana, Geneva, "Lucida Sans Unicode", sans-serif; font-size: 12px; }
 
 html, button, input, select, textarea { font-family: Verdana, Geneva, "Lucida Sans Unicode", sans-serif; }
 
@@ -294,13 +295,13 @@ p.meta + p { margin-top: 2px; }
 
 /* Navigation highlighting */
 /* Global navigation (header) */
-body#home header nav li.home { background: url(/static/images/layout/active-nav-home.png) bottom center no-repeat transparent; }
-body.simple header nav li.simple { background: url(/static/images/layout/active-nav-app.png) bottom center no-repeat; }
-body.plantshare header nav li.plantshare { background: url(/static/images/layout/active-nav-app.png) bottom center no-repeat; }
-body.full header nav li.full { background: url(/static/images/layout/active-nav-app.png) bottom center no-repeat; }
-body.dkey header nav li.dkey { background: url(/static/images/layout/active-nav-app.png) bottom center no-repeat; }
-body.teaching header nav li.teaching { background: url(/static/images/layout/active-nav-app.png) bottom center no-repeat; }
-body.help header nav li.help { background: url(/static/images/layout/active-nav-app.png) bottom center no-repeat; }
+body#home header nav li.home { background: url(../images/layout/active-nav-home.png) bottom center no-repeat transparent; }
+body.simple header nav li.simple { background: url(../images/layout/active-nav-app.png) bottom center no-repeat; }
+body.plantshare header nav li.plantshare { background: url(../images/layout/active-nav-app.png) bottom center no-repeat; }
+body.full header nav li.full { background: url(../images/layout/active-nav-app.png) bottom center no-repeat; }
+body.dkey header nav li.dkey { background: url(../images/layout/active-nav-app.png) bottom center no-repeat; }
+body.teaching header nav li.teaching { background: url(../images/layout/active-nav-app.png) bottom center no-repeat; }
+body.help header nav li.help { background: url(../images/layout/active-nav-app.png) bottom center no-repeat; }
 
 /* Section navigation (sidebar, only in some sections) */
 body { /* Handle pages beneath subsections so they will have a "you are here" marker. Each of these must be set up individually where needed. */ }
@@ -317,26 +318,26 @@ header { height: 120px; }
 header .container { margin: 0 auto; padding: 0 10px; width: 960px; }
 header p { margin: 0; }
 header .go-botany { float: left; margin: 0 0 0 -15px; padding: 14px 0 0 0; width: 443px; }
-header .go-botany a { background: url(/static/images/layout/logo-app.png) no-repeat transparent; height: 65px; width: 443px; display: block; text-indent: -9000px; }
+header .go-botany a { background: url(../images/layout/logo-app.png) no-repeat transparent; height: 65px; width: 443px; display: block; text-indent: -9000px; }
 header .newfs { float: right; }
-header .newfs a { background: url(/static/images/layout/newfs-logo-app.png) no-repeat transparent; height: 66px; width: 116px; display: block; text-indent: -9000px; }
-header nav { background: url(/static/images/layout/nav-app-green.png) no-repeat; background-position: 0px 79px; font-family: "Trebuchet MS", Helvetica, Arial, "Lucida Sans Unicode", sans-serif; height: 120px; padding: 0 0 0 48px; }
+header .newfs a { background: url(../images/layout/newfs-logo-app.png) no-repeat transparent; height: 66px; width: 116px; display: block; text-indent: -9000px; }
+header nav { background: url(../images/layout/nav-app-green.png) no-repeat; background-position: 0px 79px; font-family: "Trebuchet MS", Helvetica, Arial, "Lucida Sans Unicode", sans-serif; height: 120px; padding: 0 0 0 48px; }
 header nav a { color: #fff; display: block; height: 35px; padding: 5px 8px 0; }
 header nav a:visited, header nav a:not([href]) { color: #fff; }
 header nav > a { display: none; /* Omit the 'sections' link by default */ }
 header nav ul { clear: both; }
 header nav li { display: block; float: left; font-size: 14px; line-height: normal; margin: 0 12px 0 0; padding: 0; }
 header nav li a:hover { text-decoration: none; }
-header nav #search { background: white url(/static/images/layout/search-left.png) left center no-repeat; float: right; height: 20px; margin: 4px 4px 0 0; padding: 0 0 0 11px; }
+header nav #search { background: white url(../images/layout/search-left.png) left center no-repeat; float: right; height: 20px; margin: 4px 4px 0 0; padding: 0 0 0 11px; }
 header nav #search form { display: block; margin: 0; padding: 0; width: 262px; }
 header nav #search input { background: #fff; border: 0; float: left; font-family: "Trebuchet MS", Helvetica, Arial, "Lucida Sans Unicode", sans-serif; font-size: 14px; height: 20px; margin: 0; padding: 0; width: 219px; }
 header nav #search input:focus { outline: none; }
-header nav #search button { background: #317b0c url(/static/images/layout/search-btn.png) 0 0 no-repeat; border: none; cursor: pointer; float: right; height: 20px; margin: 0; outline: none; padding: 0; width: 42px; display: block; text-indent: -9000px; }
+header nav #search button { background: #317b0c url(../images/layout/search-btn.png) 0 0 no-repeat; border: none; cursor: pointer; float: right; height: 20px; margin: 0; outline: none; padding: 0; width: 42px; display: block; text-indent: -9000px; }
 
 /* Main content */
 .content { padding: 8px 0 0; }
 .content .container { margin: 0 auto; padding: 0 10px; width: 960px; }
-.content #main { background: url(/static/images/layout/sidebar-bg.png) repeat-y; float: right; min-height: 545px; padding-bottom: 24px; padding-left: 250px; width: 710px; }
+.content #main { background: url(../images/layout/sidebar-bg.png) repeat-y; float: right; min-height: 545px; padding-bottom: 24px; padding-left: 250px; width: 710px; }
 .content #main .smallscreen-anchor-nav { display: none; }
 .content .container.free-sidebar #main { background: none; }
 .content .container.free-sidebar #sidebar { border-top: 0; height: auto; padding: 0; }
@@ -348,7 +349,7 @@ header nav #search button { background: #317b0c url(/static/images/layout/search
 #sidebar .section h4 { margin: 0 0 5px 0; }
 #sidebar .section h4 + p { margin-top: 0; }
 #sidebar .section.separate { border-top: 1px solid #e2dfcb; padding-top: 16px; }
-#sidebar .section.plant-map { background: url(/static/images/layout/plant-map.png) 95% 1% no-repeat; padding: 0 25px 16px 16px; }
+#sidebar .section.plant-map { background: url(../images/layout/plant-map.png) 95% 1% no-repeat; padding: 0 25px 16px 16px; }
 #sidebar .section .left { float: left; }
 #sidebar .section p { margin: 0; }
 #sidebar a:hover { text-decoration: none; }
@@ -387,7 +388,7 @@ footer .support { margin-right: 0; padding: 18px 0; }
 #breadcrumb .label { color: #807121; }
 
 /* Wait spinners */
-.wait-spinner { background: url(/static/images/icons/preloaders-dot-net-lg.gif) no-repeat scroll center center transparent; height: 350px; margin: auto; /* Wait spinner's children are hidden until the parent is unspinnered. */ }
+.wait-spinner { background: url(../images/icons/preloaders-dot-net-lg.gif) no-repeat scroll center center transparent; height: 350px; margin: auto; /* Wait spinner's children are hidden until the parent is unspinnered. */ }
 .wait-spinner * { display: none; }
 
 /* Images (gallery with previous/next buttons, or single) */
@@ -398,8 +399,8 @@ footer .support { margin-right: 0; padding: 18px 0; }
 .img-gallery .images > * { display: block; /* For example, might be <a> instead of <img>. */ float: left; /* This is what makes scrolling actually work. */ }
 .img-gallery .controls { margin: 8px 0 12px 0; text-align: center; }
 .img-gallery .controls a { cursor: pointer; display: inline-block; height: 32px; text-indent: -9000px; width: 32px; }
-.img-gallery .controls a.next { background: url(/static/images/icons/next-larger.png) 0 0 no-repeat transparent; }
-.img-gallery .controls a.prev { background: url(/static/images/icons/prev-larger.png) 0 0 no-repeat transparent; }
+.img-gallery .controls a.next { background: url(../images/icons/next-larger.png) 0 0 no-repeat transparent; }
+.img-gallery .controls a.prev { background: url(../images/icons/prev-larger.png) 0 0 no-repeat transparent; }
 .img-gallery .controls a.disabled { cursor: default; opacity: 0.4; filter: Alpha(opacity=40); }
 
 /* Plant image grids. Currently used on the dkey. May someday be used on the Level 3 page if it is moved over to site.scss too. Copied from the relevant part of styles.scss and included here, instead of in the _dkey.scss file, because image grids are a site-wide pattern. */
@@ -491,11 +492,11 @@ table.list th td:first-child { font-family: "Trebuchet MS", Helvetica, Arial, "L
 
 /* Imports for various pages, sections, features, etc. Each of these can contain their own media queries. */
 /* Home */
-#home { background-color: #f3f3c3; background-image: url(/static/images/layout/body-home.jpg); background-position: left 0px top; background-repeat: repeat-x; }
-#home #all { background: url(/static/images/layout/content-home-bg.jpg) center 72px no-repeat transparent; }
-#home header h1 { background: url(/static/images/branding/logo-toplevel.png) no-repeat transparent; float: left; margin: 0 0 0 67px; height: 107px; width: 595px; display: block; text-indent: -9000px; }
-#home header .newfs a { background: url(/static/images/branding/newfs-logo-toplevel.png) no-repeat transparent; height: 88px; width: 160px; }
-#home header nav { background: url(/static/images/layout/nav-toplevel.png) center 107px no-repeat; height: 160px; padding: 0 0 0 19px; }
+#home { background-color: #f3f3c3; background-image: url(../images/layout/body-home.jpg); background-position: left 0px top; background-repeat: repeat-x; }
+#home #all { background: url(../images/layout/content-home-bg.jpg) center 72px no-repeat transparent; }
+#home header h1 { background: url(../images/branding/logo-toplevel.png) no-repeat transparent; float: left; margin: 0 0 0 67px; height: 107px; width: 595px; display: block; text-indent: -9000px; }
+#home header .newfs a { background: url(../images/branding/newfs-logo-toplevel.png) no-repeat transparent; height: 88px; width: 160px; }
+#home header nav { background: url(../images/layout/nav-toplevel.png) center 107px no-repeat; height: 160px; padding: 0 0 0 19px; }
 #home header nav li { margin-right: 9px; }
 #home header nav li.home { margin: 0 63px 0 0; }
 #home header nav li.home a { color: #fff; }
@@ -509,14 +510,14 @@ table.list th td:first-child { font-family: "Trebuchet MS", Helvetica, Arial, "L
 #home #banner p { margin: 12px 0 0 0; text-align: left; text-shadow: 0px 1px 1px #fff; }
 #home #banner #cta { margin: 21px 2px 0; width: 184px; }
 #home #overlay { background: rgba(255, 255, 255, 0.8); height: 318px; padding: 15px 30px 0; position: absolute; left: 646px; text-align: center; top: 6px; width: 248px; z-index: 50; }
-#home .three-col { background: url(/static/images/layout/dot.png) right top repeat-y; float: left; height: 240px; margin: 354px 23px 5px 0; padding: 8px 23px 0 0; width: 289px; }
+#home .three-col { background: url(../images/layout/dot.png) right top repeat-y; float: left; height: 240px; margin: 354px 23px 5px 0; padding: 8px 23px 0 0; width: 289px; }
 #home .three-col.last { background: 0; margin-right: 0; padding: 8px 0 0 0; }
 #home .three-col.last a.orange-button, #home .three-col.last body.plantshare .image-modal a.button, body.plantshare .image-modal #home .three-col.last a.button, #home .three-col.last body.plantshare#ask #main a.submit, body.plantshare#ask #main #home .three-col.last a.submit, #home .three-col.last body.plantshare#plantshare #ask a.submit, body.plantshare#plantshare #ask #home .three-col.last a.submit, #home .three-col.last #dkey #main .offer-help-aside a.button, #dkey #main .offer-help-aside #home .three-col.last a.button, #home .three-col.last #dkey #main ul.couplets a.button, #dkey #main ul.couplets #home .three-col.last a.button, #home .three-col.last #dkey #main a.show-all-button, #dkey #main #home .three-col.last a.show-all-button { margin: 33px 0 0 0; }
 #home .three-col h3 { font-size: 24px; }
 #home .three-col h4 { margin: 0 0 3px 0; font-style: italic; color: #807121; }
 #home .three-col p { margin: 0; }
 #home .three-col a.orange-button, #home .three-col body.plantshare .image-modal a.button, body.plantshare .image-modal #home .three-col a.button, #home .three-col body.plantshare#ask #main a.submit, body.plantshare#ask #main #home .three-col a.submit, #home .three-col body.plantshare#plantshare #ask a.submit, body.plantshare#plantshare #ask #home .three-col a.submit, #home .three-col #dkey #main .offer-help-aside a.button, #dkey #main .offer-help-aside #home .three-col a.button, #home .three-col #dkey #main ul.couplets a.button, #dkey #main ul.couplets #home .three-col a.button, #home .three-col #dkey #main a.show-all-button, #dkey #main #home .three-col a.show-all-button { margin: 13px 0 0 0; }
-#home a.subscribe { background: url(/static/images/layout/subscribe.png) 0 0 no-repeat; cursor: pointer; height: 16px; width: 87px; display: block; text-indent: -9000px; }
+#home a.subscribe { background: url(../images/layout/subscribe.png) 0 0 no-repeat; cursor: pointer; height: 16px; width: 87px; display: block; text-indent: -9000px; }
 #home a.subscribe:hover { background-position: 0 -16px; }
 #home a.subscribe:active { background-position: 0 -32px; }
 #home #potd { /* Plant of the Day */ background: #c7e2a1; border: 3px solid #fff; clear: left; height: 140px; margin: 15px 0; padding: 10px; -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3); box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3); }
@@ -619,7 +620,7 @@ body.taxa#genus ul.species { font-size: 14px; list-style: none; }
 body.taxa#genus ul.species li { margin: 0 0 5px 0; }
 body.taxa#genus p.family { font-size: 14px; margin: 0; }
 body.taxa#species { /* end #main */ /* Larger gallery styles */ /* Smooth Div Scroll image area */ }
-body.taxa#species #main { background: url(/static/images/layout/sidebar-bg.png) repeat-y; /* layout: right-side content sections */ /* left-side content sections */ /* space maps enough away from text atop them */ }
+body.taxa#species #main { background: url(../images/layout/sidebar-bg.png) repeat-y; /* layout: right-side content sections */ /* left-side content sections */ /* space maps enough away from text atop them */ }
 body.taxa#species #main .common { margin: 6px 0 12px; }
 body.taxa#species #main #breadcrumb, body.taxa#species #main #name, body.taxa#species #main #species-images, body.taxa#species #main #images-note, body.taxa#species #main #partner, body.taxa#species #main #facts, body.taxa#species #main #habitat, body.taxa#species #main #chars, body.taxa#species #main #wetland, body.taxa#species #main #status, body.taxa#species #main #info-dkey { clear: left; margin-left: 250px; }
 body.taxa#species #main .section { padding: 16px 16px 0; width: 197px; }
@@ -628,7 +629,7 @@ body.taxa#species #main .section p { margin-bottom: 0; }
 body.taxa#species #main #maps, body.taxa#species #main #side { position: absolute; }
 body.taxa#species #main #maps h2, body.taxa#species #main #side h2 { font-size: 14px; margin: 0 0 4px 0; }
 body.taxa#species #main #maps { border-top: 1px solid #c3d941; top: 128px; }
-body.taxa#species #main .definitions-link { background-image: url(/static/images/icons/icon-info.png); background-position: 0px 1px; background-repeat: no-repeat; background-size: auto 12px; clear: left; display: inline-block; font-size: 12px; margin: 4px 0 8px; padding: 0 0 0 15px; }
+body.taxa#species #main .definitions-link { background-image: url(../images/icons/icon-info.png); background-position: 0px 1px; background-repeat: no-repeat; background-size: auto 12px; clear: left; display: inline-block; font-size: 12px; margin: 4px 0 8px; padding: 0 0 0 15px; }
 body.taxa#species #main .found-plant { background-color: #f0f0c0; font-size: 12px; line-height: 16px; padding: 4px 12px; }
 body.taxa#species #main .nemap h2 + p, body.taxa#species #main .namap h2 + p { padding-bottom: 8px; }
 body.taxa#species #main #side { top: 754px; /* remaining side content is positioned further down to leave room for maps in full-width layout */ }
@@ -647,14 +648,14 @@ body.taxa#species #main h5 { font-size: 14px; }
 body.taxa#species #main p { margin: 0 0 15px; }
 body.taxa#species #sb-player.html { background: #fff; overflow: hidden; /* Get rid of vertical scrollbar in WebKit on enlarged N. America dist. map. */ padding: 0 5px 5px; }
 body.taxa#species #sb-player #na-dist-county-map { background: #fff; height: 100%; width: 100%; }
-body.taxa#species a.description-control { background: url(/static/images/icons/plus.png) left 50% no-repeat; display: block; margin: 10px 0 12px 0; padding: 3px 0 3px 25px; }
-body.taxa#species a.description-control.expanded { background: url(/static/images/icons/minus.png) left 50% no-repeat; }
+body.taxa#species a.description-control { background: url(../images/icons/plus.png) left 50% no-repeat; display: block; margin: 10px 0 12px 0; padding: 3px 0 3px 25px; }
+body.taxa#species a.description-control.expanded { background: url(../images/icons/minus.png) left 50% no-repeat; }
 body.taxa#species ul.full-description { background: #fbfbf8; border: 1px solid #e1e1dc; display: none; margin: 0 0 15px 0; }
 body.taxa#species ul.full-description > li { border-bottom: 1px solid #e1e1dc; clear: left; display: block; padding: 18px; margin: 0 0 0 0; }
 body.taxa#species ul.full-description > li:last-child { border-bottom: none; }
 body.taxa#species ul.full-description > li:hover { background-color: #fff; }
-body.taxa#species ul.full-description > li h5 { background: url(/static/images/icons/plus.png) left 50% no-repeat; cursor: pointer; padding-left: 28px; }
-body.taxa#species ul.full-description > li h5.expanded { background: url(/static/images/icons/minus.png) left 50% no-repeat; }
+body.taxa#species ul.full-description > li h5 { background: url(../images/icons/plus.png) left 50% no-repeat; cursor: pointer; padding-left: 28px; }
+body.taxa#species ul.full-description > li h5.expanded { background: url(../images/icons/minus.png) left 50% no-repeat; }
 body.taxa#species ul.full-description > li div { display: none; padding-left: 28px; }
 body.taxa#species a.enlarge { display: block; margin: 0 0 8px 0; }
 body.taxa#species a.enlarge:hover { text-decoration: none; }
@@ -736,9 +737,9 @@ body.skey.groups-subgroups .list-item .details { float: left; width: 425px; }
 body.skey.groups-subgroups .list-item h2 { line-height: 110%; margin: 0 0 5px 0; }
 body.skey.groups-subgroups .list-item h2 + p { color: #807121; display: block; font-family: "Trebuchet MS", Helvetica, Arial, "Lucida Sans Unicode", sans-serif; font-size: 12px; font-style: italic; margin: 7px 0 1px; padding-left: 0; }
 body.skey.groups-subgroups .list-item p { margin: 0; padding: 0 0 7px 25px; }
-body.skey.groups-subgroups .list-item p.key-char { background: url(/static/images/icons/icon1.png) 0 2px no-repeat; }
-body.skey.groups-subgroups .list-item p.exceptions { background: url(/static/images/icons/icon2.png) 0 2px no-repeat; }
-body.skey.groups-subgroups .list-item p.vid { background: url(/static/images/icons/icon3.png) 0 2px no-repeat; }
+body.skey.groups-subgroups .list-item p.key-char { background: url(../images/icons/icon1.png) 0 2px no-repeat; }
+body.skey.groups-subgroups .list-item p.exceptions { background: url(../images/icons/icon2.png) 0 2px no-repeat; }
+body.skey.groups-subgroups .list-item p.vid { background: url(../images/icons/icon3.png) 0 2px no-repeat; }
 body.skey.groups-subgroups .list-item .section-title { display: block; text-transform: uppercase; }
 body.skey.groups-subgroups .list-item .details a { margin: 10px 0 14px; }
 body.skey.groups-subgroups .not-my-plant { clear: left; float: right; font-family: "Trebuchet MS", Helvetica, Arial, "Lucida Sans Unicode", sans-serif; padding: 20px 0 0; text-align: center; }
@@ -771,7 +772,7 @@ body.skey.results .plant-list .plant p.plant-name { font-family: Tahoma, "Trebuc
 body.skey.results .plant-list .plant p.plant-name span.latin { display: block; font-family: Verdana, Geneva, "Lucida Sans Unicode", sans-serif; /* Verdana because it's wider than Trebuchet: easier to read in italics */ font-style: italic; padding-bottom: 4px; }
 body.skey.results .plant-list .plant-img-container { height: 149px; overflow: hidden; width: 160px; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6); -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6); }
 body.skey.results .plant-list .plant-img-container img { height: 149px; /* so lazy_images knows when <img> is on screen */ }
-body.skey.results .plant-list .wait { background: url(/static/images/icons/preloaders-dot-net-lg.gif) no-repeat scroll center center transparent; height: 350px; margin: auto; }
+body.skey.results .plant-list .wait { background: url(../images/icons/preloaders-dot-net-lg.gif) no-repeat scroll center center transparent; height: 350px; margin: auto; }
 body.skey.results .plant-list table { font-family: "Trebuchet MS", Helvetica, Arial, "Lucida Sans Unicode", sans-serif; width: 100%; }
 body.skey.results .plant-list table tr { height: 20px; }
 body.skey.results .plant-list table tr.first-visible td { border-top: 0; }
@@ -786,10 +787,10 @@ body.skey.results #question-nav.tinted { background: #fcfdf5; }
 body.skey.results #question-nav .scroll { background: #fff; border-bottom: 1px solid #9cc86b; border-left: 1px solid #519136; border-top: 1px solid #519136; display: block; height: 335px; margin: 0 0 10px 0; overflow: auto; width: 229px; }
 body.skey.results #question-nav .scroll::-webkit-scrollbar { width: 14px; }
 body.skey.results #question-nav .scroll::-webkit-scrollbar-button { background-color: #9cc86b; border-top: 1px solid #fff; }
-body.skey.results #question-nav .scroll::-webkit-scrollbar-button:vertical:decrement { background: url(/static/images/icons/arrow-up.jpg) no-repeat 0 0; }
-body.skey.results #question-nav .scroll::-webkit-scrollbar-button:vertical:increment { background: url(/static/images/icons/arrow-down.jpg) no-repeat 0 0; }
+body.skey.results #question-nav .scroll::-webkit-scrollbar-button:vertical:decrement { background: url(../images/icons/arrow-up.jpg) no-repeat 0 0; }
+body.skey.results #question-nav .scroll::-webkit-scrollbar-button:vertical:increment { background: url(../images/icons/arrow-down.jpg) no-repeat 0 0; }
 body.skey.results #question-nav .scroll::-webkit-scrollbar-track { background-color: #fff; border-left: 1px solid #c3d941; }
-body.skey.results #question-nav .scroll::-webkit-scrollbar-thumb:vertical { background-color: #fff; border-left: 1px solid #c3d941; background-image: url(/static/images/layout/scroll-thumb-top.png), url(/static/images/layout/scroll-thumb-bottom.png), url(/static/images/layout/scroll-thumb.png); background-position: center top, center bottom, center; background-repeat: no-repeat, no-repeat, repeat-y; }
+body.skey.results #question-nav .scroll::-webkit-scrollbar-thumb:vertical { background-color: #fff; border-left: 1px solid #c3d941; background-image: url(../images/layout/scroll-thumb-top.png), url(../images/layout/scroll-thumb-bottom.png), url(../images/layout/scroll-thumb.png); background-position: center top, center bottom, center; background-repeat: no-repeat, no-repeat, repeat-y; }
 body.skey.results #question-nav .section { padding: 0 17px 16px; }
 body.skey.results #question-nav .section.instructions { background: #9cc86b; color: #fff; padding: 16px; }
 body.skey.results #question-nav .section.instructions h5 { line-height: 120%; margin: 0; }
@@ -807,7 +808,7 @@ body.skey.results #question-nav .option-list > li.active, body.skey.results #que
 body.skey.results #question-nav .option-list .option { color: #1a2e11; margin-left: 0; text-decoration: none; }
 body.skey.results #question-nav .option-list .option .name { display: block; font-weight: bold; margin: 0 0 3px 0; }
 body.skey.results #question-nav .option-list .clear-filter { color: #317b0c; display: block; margin-left: 0; margin-top: 4px; width: 45px; }
-body.skey.results #question-nav .loading { background: url(/static/images/icons/preloaders-dot-net-sm.gif) no-repeat scroll 0 0 transparent; font-weight: bold; margin: 12px; padding: 0 0 0 20px; }
+body.skey.results #question-nav .loading { background: url(../images/icons/preloaders-dot-net-sm.gif) no-repeat scroll 0 0 transparent; font-weight: bold; margin: 12px; padding: 0 0 0 20px; }
 body.skey.results #results-section { float: left; margin: -8px 0 28px 18px; width: 710px; }
 body.skey.results a.get-questions, body.skey.results a.add-questions { color: white; cursor: pointer; margin: 2px 0 0 10px; width: 171px; }
 body.skey.results #intro-overlay { /* for introductory overlay */ display: none; font-family: "Trebuchet MS", Helvetica, Arial, "Lucida Sans Unicode", sans-serif; font-size: 40px; text-align: center; z-index: 1000; /* Arrows */ }
@@ -843,7 +844,7 @@ body.skey.results .working-area .choice img { height: 82px; }
 body.skey.results .working-area .choice img[id] { /* only border if image has id, not on empty */ border: 1px solid #ddd; height: 80px; }
 body.skey.results .working-area .choice label { cursor: pointer; display: block; font-family: Tahoma, "Trebuchet MS", "Lucida Sans Unicode", sans-serif; font-size: 12px; line-height: 14px; max-width: 250px; min-width: 70px; padding-top: 0; word-wrap: break-word; /* can break mid-word */ }
 body.skey.results .working-area .choice input { margin: 0 3px 0 -18px; }
-body.skey.results .working-area .close { background: url(/static/images/icons/close.png) no-repeat transparent; display: block; float: right; height: 16px; margin: 5px 0 0 0; padding: 12px 0 0 0; width: 16px; }
+body.skey.results .working-area .close { background: url(../images/icons/close.png) no-repeat transparent; display: block; float: right; height: 16px; margin: 5px 0 0 0; padding: 12px 0 0 0; width: 16px; }
 body.skey.results .working-area h4 { color: #000; display: none; font-size: 18px; line-height: 130%; margin: 6px 0; width: 650px; }
 body.skey.results .working-area .intro-message h4 { display: block; font-weight: bold; }
 body.skey.results .working-area .intro-message p { font-size: 14px; margin-bottom: 5px; }
@@ -1006,7 +1007,7 @@ max-width: 0;
 min-width: 0;
 */ padding-left: 4px; padding-right: 12px; width: 96%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   body.skey.results .working-area .row:first-of-type .choice:first-of-type { border-top: none; }
-  body.skey.results .working-area .checked { background: #eef2e9 url(/static/images/layout/check.png) no-repeat; background-size: auto 20px; background-position: 98% center; }
+  body.skey.results .working-area .checked { background: #eef2e9 url(../images/layout/check.png) no-repeat; background-size: auto 20px; background-position: 98% center; }
   body.skey.results .working-area .row:first-of-type .checked:first-of-type { border-top-left-radius: 8px; border-top-right-radius: 8px; }
   body.skey.results .working-area .row:last-of-type .checked:last-of-type { border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
   body.skey.results .working-area .choice-label { display: table-cell; vertical-align: middle; }
@@ -1083,7 +1084,7 @@ min-width: 0;
   body.skey.mobile-quickapply .working-area .choice label { width: 70%; }
   body.skey.mobile-quickapply .working-area .choice label:after { content: "Apply"; position: absolute; right: 0; border: solid 1px #ccc; margin: 8px 5px 2px 0; padding: 5px 1em; line-height: 14px; }
   body.skey.mobile-quickapply .working-area .choice.checked { background: none; }
-  body.skey.mobile-quickapply .working-area .choice.checked label:after { background: url(/static/images/layout/check.png) no-repeat; background-size: auto 20px; background-position: 5px center; content: "Applied"; padding-left: 30px; }
+  body.skey.mobile-quickapply .working-area .choice.checked label:after { background: url(../images/layout/check.png) no-repeat; background-size: auto 20px; background-position: 5px center; content: "Applied"; padding-left: 30px; }
   body.skey.mobile-quickapply .working-area .choice.disabled label:after { content: none; }
   /* end body.skey */ }
 /* End of styles common to both smartphone widths */
@@ -1122,7 +1123,7 @@ body.plantshare .notification { width: 475px; }
 body.plantshare .notification ul { line-height: 18px; list-style-position: inside; margin: 10px 0 0 24px; }
 body.plantshare .ps-button { margin: 10px 0; }
 body.plantshare .save-btn { width: 99px !important; }
-body.plantshare a.close-btn { background: transparent url(/static/images/icons/close.png) no-repeat; display: block; height: 16px; width: 16px; text-indent: -9999px; }
+body.plantshare a.close-btn { background: transparent url(../images/icons/close.png) no-repeat; display: block; height: 16px; width: 16px; text-indent: -9999px; }
 body.plantshare #main .profile { clear: left; width: 471px; }
 body.plantshare #main .profile h2 { margin-bottom: 14px; width: 200px; }
 body.plantshare #main .profile a.edit { display: block; float: right; }
@@ -1177,7 +1178,7 @@ body.plantshare #find-people-form + p { clear: left; padding-top: 14px; }
 body.plantshare#find-people-profile { background: none; }
 body.plantshare#find-people-profile div { background: #fff; border: 5px solid #acac90; height: 185px; padding: 0 16px 0 0; }
 body.plantshare#find-people-profile div p { margin-top: 0; }
-body.plantshare#find-people-profile .close { background: transparent url(/static/images/icons/close.png) no-repeat; cursor: pointer; display: block; height: 16px; position: absolute; right: 15px; text-indent: -9999px; top: 15px; width: 16px; }
+body.plantshare#find-people-profile .close { background: transparent url(../images/icons/close.png) no-repeat; cursor: pointer; display: block; height: 16px; position: absolute; right: 15px; text-indent: -9999px; top: 15px; width: 16px; }
 body.plantshare#find-people-profile .avatar { background: #e1f0d1; float: left; height: 153px; margin: 16px; width: 169px; }
 body.plantshare#find-people-profile .map { float: right; height: 113px; width: 169px; }
 body.plantshare#find-people-profile .not-found { padding: 70px 0; text-align: center; }
@@ -1191,8 +1192,8 @@ body.plantshare#log-in form.login input { border-color: #c3d941; }
 body.plantshare #sightings-locator { /* end .mini */ }
 body.plantshare #sightings-locator h3 { display: inline-block; float: left; font-size: 14px; line-height: 22px; margin: 0 7px 5px 0; }
 body.plantshare #sightings-locator input { border: 0 none; float: left; height: 22px; margin: 0 0 5px 0; padding: 0 2px 0 12px; }
-body.plantshare #sightings-locator input[type='text'] { background: transparent url(/static/images/layout/plantshare-btns.png) no-repeat 0px -334px; font-size: 11px; width: 160px; }
-body.plantshare #sightings-locator input[type='submit'] { background: transparent url(/static/images/layout/plantshare-btns.png) no-repeat -483px -334px; font-size: 0; text-indent: -9999px; width: 30px; }
+body.plantshare #sightings-locator input[type='text'] { background: transparent url(../images/layout/plantshare-btns.png) no-repeat 0px -334px; font-size: 11px; width: 160px; }
+body.plantshare #sightings-locator input[type='submit'] { background: transparent url(../images/layout/plantshare-btns.png) no-repeat -483px -334px; font-size: 0; text-indent: -9999px; width: 30px; }
 body.plantshare #sightings-locator input:focus { outline: 0 none; }
 body.plantshare #sightings-locator input + div { font-size: 11px; }
 body.plantshare #sightings-locator .map { clear: left; margin-top: 36px; }
@@ -1235,7 +1236,7 @@ body.plantshare#manage-sightings .content table img { max-width: 90px; }
 body.plantshare#manage-sightings #sb-nav-close { display: none; }
 body.plantshare#delete-sighting, body.plantshare#delete-checklist { background: none; }
 body.plantshare#delete-sighting div, body.plantshare#delete-checklist div { background: #fff; border: 5px solid #acac90; height: 100%; padding: 0 18px; text-align: center; }
-body.plantshare#delete-sighting .close, body.plantshare#delete-checklist .close { background: transparent url(/static/images/icons/close.png) no-repeat; cursor: pointer; display: block; height: 16px; position: absolute; right: 15px; text-indent: -9999px; top: 15px; width: 16px; }
+body.plantshare#delete-sighting .close, body.plantshare#delete-checklist .close { background: transparent url(../images/icons/close.png) no-repeat; cursor: pointer; display: block; height: 16px; position: absolute; right: 15px; text-indent: -9999px; top: 15px; width: 16px; }
 body.plantshare#delete-sighting h2, body.plantshare#delete-checklist h2 { font-size: 18px; text-align: left; }
 body.plantshare#delete-sighting table, body.plantshare#delete-checklist table { margin: 18px 0; width: 100%; }
 body.plantshare#delete-sighting thead, body.plantshare#delete-checklist thead { display: none; }
@@ -1252,7 +1253,7 @@ body.plantshare .image-modal img { float: left; margin: 0 5px 10px 0; max-height
 body.plantshare .image-modal a.button { color: white; cursor: pointer; display: inline-block; margin: 10px 6px 0 0; width: 100px; }
 body.plantshare .image-modal div.modal-footer { color: #888; display: block; float: left; position: relative; width: 100%; }
 body.plantshare .image-modal div.modal-footer div.file-path { border: 1px solid #888; color: #888; margin: 2px 0 auto; padding: 2px; }
-body.plantshare .image-modal a.close { background: transparent url(/static/images/icons/close.png) no-repeat; cursor: pointer; display: block; height: 16px; position: absolute; right: 15px; text-indent: -9999px; top: 15px; width: 16px; }
+body.plantshare .image-modal a.close { background: transparent url(../images/icons/close.png) no-repeat; cursor: pointer; display: block; height: 16px; position: absolute; right: 15px; text-indent: -9999px; top: 15px; width: 16px; }
 body.plantshare .image-modal h4 { float: right; font-size: 18px; margin: 0 0 5px; width: 270px; }
 body.plantshare .image-modal form { float: right; width: 270px; }
 body.plantshare .image-modal input { border: 0 none !important; box-shadow: inset 0 0 0 white !important; }
@@ -1320,7 +1321,7 @@ body.plantshare#profile .info-section .info.box, body.plantshare#profile .locati
 body.plantshare#profile .info-section .info.box .avatar, body.plantshare#profile .location-section .info.box .avatar { float: left; margin-right: 15px; padding: 0; width: 170px; }
 body.plantshare#profile .info-section .info.box .avatar img, body.plantshare#profile .location-section .info.box .avatar img { background: #e1f0d1; border: 0; height: 153px; width: 169px; }
 body.plantshare#profile .info-section .info.box .avatar p, body.plantshare#profile .location-section .info.box .avatar p { text-align: center; margin: 0; }
-body.plantshare#profile .info-section .info.box .avatar.uploading, body.plantshare#profile .location-section .info.box .avatar.uploading { background-image: url(/static/images/icons/preloaders-dot-net-lg.gif); background-color: white; background-position: center; background-repeat: no-repeat; }
+body.plantshare#profile .info-section .info.box .avatar.uploading, body.plantshare#profile .location-section .info.box .avatar.uploading { background-image: url(../images/icons/preloaders-dot-net-lg.gif); background-color: white; background-position: center; background-repeat: no-repeat; }
 body.plantshare#profile .info-section .info.box #id_location_map, body.plantshare#profile .location-section .info.box #id_location_map { border-bottom: 0; border-left: 0; border-top: 0; float: left; margin: 0 15px 0 0; padding: 0; }
 body.plantshare#profile .info-section .info.box table, body.plantshare#profile .location-section .info.box table { margin: 10px 0 0 0; padding: 0; width: 493px; }
 body.plantshare#profile .info-section .info.box table td, body.plantshare#profile .location-section .info.box table td { padding: 7px 10px; }
@@ -1337,7 +1338,7 @@ body.plantshare#profile .email-address { margin-top: 32px; }
 body.plantshare .change-password input[type='submit'], body.plantshare .change-email input[type='submit'] { margin: 8px 28px 0 0; width: auto; }
 body.plantshare .change-password input[type='password'], body.plantshare .change-password input[type='text'], body.plantshare .change-email input[type='password'], body.plantshare .change-email input[type='text'] { margin-bottom: 10px; width: 250px !important; }
 body.plantshare .change-password a { font-family: "Trebuchet MS", Helvetica, Arial, "Lucida Sans Unicode", sans-serif; font-size: 11px; }
-body.plantshare .change-email .verified-address { background: url(/static/images/layout/check.png) no-repeat; background-position: center left; background-size: 18px 19px; margin: 28px 0; padding-left: 26px; }
+body.plantshare .change-email .verified-address { background: url(../images/layout/check.png) no-repeat; background-position: center left; background-size: 18px 19px; margin: 28px 0; padding-left: 26px; }
 body.plantshare#forgot-password #main form input[type='text'] { width: 250px; }
 body.plantshare#forgot-password #main form input[type='submit'] { margin-top: 8px; }
 body.plantshare #login.box { background-color: #d3eaad; border-color: #317b0c; clear: left; max-width: 475px; padding: 0; }
@@ -1537,8 +1538,8 @@ body.plantshare#screen-images div.form-control { margin: 0 30px; }
 #dkey #main ul.couplets li { /* holds a lead and any <ul> beneath it */ display: block; position: relative; }
 #dkey #main ul.couplets .lead { /* green box */ margin: 0em 0em 1em 0em; border: 6px solid #d9dbb1; -webkit-border-radius: 1.5em; -moz-border-radius: 1.5em; -ms-border-radius: 1.5em; -o-border-radius: 1.5em; border-radius: 1.5em; padding: 1em 1em 1em 1.5em; background-color: #d9dbb1; }
 #dkey #main ul.couplets .lead.original-choice:before, #dkey #main ul.couplets .lead.alt-choice:before { display: block; position: absolute; right: -118px; height: 45px; width: 110px; content: " "; }
-#dkey #main ul.couplets .lead.original-choice:before { background: url(/static/images/layout/original-choice.png); }
-#dkey #main ul.couplets .lead.alt-choice:before { background: url(/static/images/layout/alternate-choice.png); }
+#dkey #main ul.couplets .lead.original-choice:before { background: url(../images/layout/original-choice.png); }
+#dkey #main ul.couplets .lead.alt-choice:before { background: url(../images/layout/alternate-choice.png); }
 #dkey #main ul.couplets .lead:after { /* "clear" the float for the button */ display: block; content: " "; height: 0px; clear: both; }
 #dkey #main ul.couplets .letter { /* "1a." or "12b." or whatever */ font-weight: bold; padding-right: 0.5em; }
 #dkey #main ul.couplets .button-block { /* contains what-lies-beneath and button */ float: right; margin: 0em 0em 0.4em 1.2em; text-align: right; }
@@ -1597,12 +1598,12 @@ body.search-results .search-navigation li { display: inline; margin: 0 2px; }
 /* Getting Started */
 #getting-started h2 { margin-top: 0; padding-top: 0; }
 #getting-started .question { padding: 18px 0 18px 45px; background-position: left 22px; background-repeat: no-repeat; border-bottom: 1px solid #e2dfcb; }
-#getting-started .first.question { margin: 11px 0 0 0; border-top: 1px solid #e2dfcb; background-image: url(/static/images/icons/1.png); }
-#getting-started .second.question { background-image: url(/static/images/icons/2.png); }
-#getting-started .third.question { background-image: url(/static/images/icons/3.png); }
-#getting-started .fourth.question { background-image: url(/static/images/icons/4.png); }
-#getting-started .fifth.question { background-image: url(/static/images/icons/5.png); }
-#getting-started .sixth.question { margin: 0 0 11px 0; background-image: url(/static/images/icons/6.png); }
+#getting-started .first.question { margin: 11px 0 0 0; border-top: 1px solid #e2dfcb; background-image: url(../images/icons/1.png); }
+#getting-started .second.question { background-image: url(../images/icons/2.png); }
+#getting-started .third.question { background-image: url(../images/icons/3.png); }
+#getting-started .fourth.question { background-image: url(../images/icons/4.png); }
+#getting-started .fifth.question { background-image: url(../images/icons/5.png); }
+#getting-started .sixth.question { margin: 0 0 11px 0; background-image: url(../images/icons/6.png); }
 #getting-started a.screenshot { float: right; margin: 0 0 0 15px; color: #1a2e11; text-align: center; }
 #getting-started a.screenshot:hover { text-decoration: none; }
 #getting-started a.screenshot img { margin: 10px 0; vertical-align: middle; }
@@ -1633,8 +1634,8 @@ body.search-results .search-navigation li { display: inline; margin: 0 2px; }
 #advanced-map .plant-subgroup .frame { border: 5px solid #1a2e12; height: 129px; position: absolute; top: 0; width: 150px; z-index: 100; }
 #advanced-map .plant-subgroup h3 { background: #1a2e12; color: #fff; font-size: 12px; height: 50px; line-height: 120%; margin: 0 0 0 0; padding: 6px; }
 #advanced-map .plant-subgroup .img-container { height: 139px; overflow: hidden; width: 160px; }
-#advanced-map p.video { background: url(/static/images/icons/icon3.png) left 4px no-repeat transparent; margin: 2px 0; padding: 3px 0 0 22px; }
-#advanced-map p.list { background: url(/static/images/icons/icon1.png) left 4px no-repeat transparent; margin: 2px 0 0; padding: 3px 0 0 22px; }
+#advanced-map p.video { background: url(../images/icons/icon3.png) left 4px no-repeat transparent; margin: 2px 0; padding: 3px 0 0 22px; }
+#advanced-map p.list { background: url(../images/icons/icon1.png) left 4px no-repeat transparent; margin: 2px 0 0; padding: 3px 0 0 22px; }
 
 /* Glossary */
 #glossary #alphabet { height: 33px; list-style-type: none; margin: 7px 0; padding: 0; width: 712px; /* 2px wider than its parent box so no wrap in Moz */ }
@@ -1662,8 +1663,8 @@ body.search-results .search-navigation li { display: inline; margin: 0 2px; }
 #advanced-id #main .dk-landing-section > a { bottom: 10px; margin: 0 0 0 20px; position: absolute; width: 224px; }
 
 /* System Requirements */
-#system-requirements #main p + div { background-image: url(/static/images/layout/screen-desktop-laptop.svg); background-position: top 9px left; background-repeat: no-repeat; background-size: 173px 121px; }
-#system-requirements #main div + div { background-image: url(/static/images/layout/screen-tablet.svg), url(/static/images/layout/screen-smartphone.svg); background-position: top 9px left 20px, top 9px left 122px; background-repeat: no-repeat, no-repeat; background-size: 74px 98px, 30px 57px; }
+#system-requirements #main p + div { background-image: url(../images/layout/screen-desktop-laptop.svg); background-position: top 9px left; background-repeat: no-repeat; background-size: 173px 121px; }
+#system-requirements #main div + div { background-image: url(../images/layout/screen-tablet.svg), url(../images/layout/screen-smartphone.svg); background-position: top 9px left 20px, top 9px left 122px; background-repeat: no-repeat, no-repeat; background-size: 74px 98px, 30px 57px; }
 #system-requirements #main p + div, #system-requirements #main div + div { padding-left: 200px; }
 #system-requirements #main div + div, #system-requirements #main div + h2 { clear: left; }
 #system-requirements #main div + h2 { padding-top: 10px; }
@@ -1837,7 +1838,7 @@ header.partner-site nav li a { padding: 5px 32px 0; /* fewer sections, more hori
   h3 { font-size: 14px; }
   header { height: 90px; }
   header nav { background: #508e31; clear: left; height: 32px; padding: 0; }
-  header nav > a { background: #437829 url(/static/images/icons/menu-icon.png) 7px 5px no-repeat; border: 1px solid #437829; display: inline-block; font-size: 30px; height: 24px; line-height: 68%; margin: 3px 0 0 4px; padding: 0 2px 0 7px; position: relative; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+  header nav > a { background: #437829 url(../images/icons/menu-icon.png) 7px 5px no-repeat; border: 1px solid #437829; display: inline-block; font-size: 30px; height: 24px; line-height: 68%; margin: 3px 0 0 4px; padding: 0 2px 0 7px; position: relative; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
   header nav #search { margin-top: 6px; padding-left: 10px; }
   header nav > ul { display: none; /* will use bottom navigation instead of top */ }
   header nav #search-suggest .menu { top: 83px; }

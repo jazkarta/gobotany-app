@@ -148,10 +148,10 @@
                 content: " ";
             }
             &.original-choice:before {
-                background: url(/static/images/layout/original-choice.png);
+                background: url(../images/layout/original-choice.png);
             }
             &.alt-choice:before {
-                background: url(/static/images/layout/alternate-choice.png);
+                background: url(../images/layout/alternate-choice.png);
             }
         }
         .lead:after {               /* "clear" the float for the button */
