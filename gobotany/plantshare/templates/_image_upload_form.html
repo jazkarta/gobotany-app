@@ -1,6 +1,7 @@
+{%load staticfiles %}
 <div class="image-modal">
     <a href="#" class="close">close</a>
-    <img src="/static/images/icons/no-image.png" alt="image">
+    <img src="{% static 'images/icons/no-image.png' %}" alt="image">
     <h4>Upload Image</h4>
     <form id="upload-image-form" method="POST" 
         action="{% url 'ps-ajax-image-upload' %}">
@@ -11,7 +12,7 @@
         <div style="display: none;">
             {{ image_form.image }}
             {{ image_form.image_type }}
-            <img id="hidden_image" src="/static/images/icons/no-image.png">
+            <img id="hidden_image" src="{% static 'images/icons/no-image.png' %}">
             <canvas id="image_canvas"></canvas>
         </div>
         <a class="button file-select">CHOOSE FILE</a>

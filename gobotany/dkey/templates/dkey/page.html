@@ -1,5 +1,6 @@
 {% extends "gobotany/_page_no_sidebar.html" %}
 {% load dkey_filters %}
+{% load staticfiles %}
 
 {% block title %}{% if page.title == 'Key to the Families' %}Dichotomous Key to Families{% else %}{{ page.title|expand_group_title }}: Dichotomous Key{% endif %}{% endblock %}
 {% block script_name %}dkey{% endblock %}
@@ -170,7 +171,7 @@
 {% endif %}
 
 <p class="image-type-selector">
-  <img src="/static/images/icons/show-me.png">
+  <img src="{% static 'images/icons/show-me.png' %}">
    Show photos of: <select></select> 
   {% if rank_beneath %}
     Each photo represents <b>one {{ rank_beneath }}</b> in this {{ page.rank }}.

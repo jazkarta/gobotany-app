@@ -1,3 +1,4 @@
+{% load staticfiles %}
 {% load facebook_connect %}
 <div id="login" class="box">
     <h4>Log In</h4>
@@ -9,7 +10,7 @@
             facebook_button template tag) in order to serve it over HTTPS.
             {% endcomment %}
             <input onclick="facebook_connect()" type="image"
-                src="//{{ request.META.HTTP_HOST }}/static/images/layout/connect_light_large_long.gif"
+                src="{% static 'images/layout/connect_light_large_long.gif' %}"
                 alt="Facebook Connect">
         </a>
     </div>

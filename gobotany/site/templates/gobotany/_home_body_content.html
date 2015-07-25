@@ -1,4 +1,5 @@
 {% load simplekey_extras %}
+{% load staticfiles %}
 
     <div class="content">
         <div class="container">
@@ -11,7 +12,7 @@
                 {% block images_overlay %}
                     <div id="overlay">
                         <h2>Simple ID Key</h2>
-                        <img src="/static/images/layout/separator.png" alt="">
+                        <img src="{% static 'images/layout/separator.png' %}" alt="">
                         <p>Want to know what that plant is? With our Simple Key,
                         you can identify over 1,200 common native and naturalized
                         New England plants! Observe closely, collect a sample or

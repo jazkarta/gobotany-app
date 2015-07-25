@@ -1,3 +1,4 @@
+{% load staticfiles %}
     <h1>Glossary: {{ this_letter|upper }}</h1>
     <ul id="alphabet">
         {% for letter in letters %}
@@ -19,7 +20,7 @@
                     <a name="{{ term.term|slugify }}" rel="shadowbox"
                        href="{{ term.image.url }}">
                         <img alt="{{ term.term }}"
-                             src="/static/images/icons/icon-camera.png">
+                             src="{% static 'images/icons/icon-camera.png' %}">
                     </a>
                 {% else %}
                     <a name="{{ term.term|slugify }}"></a>

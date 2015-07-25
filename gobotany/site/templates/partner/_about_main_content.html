@@ -1,9 +1,10 @@
 {% extends "gobotany/_about_main_content.html" %}
+{% load staticfiles %}
 
 {% block section2 %}
     <h2>Partner Site</h2>
         
-    <img src="/static/images/layout/about_page_photo1.jpg"
+    <img src="{% static 'images/layout/about_page_photo1.jpg' %}"
         alt="Two people inspecting and photographing a plant in the woods">
         
     <ul>

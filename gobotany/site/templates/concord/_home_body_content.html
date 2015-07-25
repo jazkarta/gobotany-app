@@ -1,10 +1,11 @@
 {% extends "gobotany/_home_body_content.html" %}
 {% load simplekey_extras %}
+{% load staticfiles %}
 
 {% block images_overlay %}
     <div id="overlay">
         <h2>Simple ID Key</h2>
-        <img src="/static/images/layout/separator.png" alt="">
+        <img src="{% static 'images/layout/separator.png' %}" alt="">
         <p>Want to know what that plant is? With the 
         Go Botany Concord Flora <b>Simple Key</b>,
         you can identify over 1,200 common

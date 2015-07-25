@@ -1,6 +1,7 @@
 {% load dkey_filters %}
 {% load simplekey_extras %}
 {% load taxa_tags %}
+{% load staticfiles %}
 
     <div id="breadcrumb">
         {% if key == 'dichotomous' %}
@@ -127,7 +128,7 @@
             {% endwith %}
             <div class="trans"></div>
             <a class="enlarge" href="#">
-                <img src="/static/images/icons/zoom.png" alt="">
+                <img src="{% static 'images/icons/zoom.png' %}" alt="">
                 enlarge</a>
         </div>
     </div>

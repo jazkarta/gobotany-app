@@ -260,6 +260,22 @@ IS_AWS_AUTHENTICATED = 'test' not in sys.argv and (
     AWS_SECRET_ACCESS_KEY != 'readonly'
     )
 
+# Serve static files from S3
+S3_STATIC = (IS_AWS_AUTHENTICATED and
+             os.environ.get('S3_STATIC', '').lower() in ('true', '1'))
+
+if S3_STATIC:
+    INSTALLED_APPS += ['collectfast']
+    # Access information for the S3 bucket
+    AWS_PRELOAD_METADATA = True
+    STATICFILES_STORAGE = 'gobotany.s3utils.StaticRootS3BotoStorage'
+    STATIC_URL = ('http://' + AWS_STORAGE_BUCKET_NAME +
+                  '.s3.amazonaws.com/static/')
+    ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+    AWS_HEADERS = {
+        'Cache-Control': 'max-age=28800, public',
+    }
+
 # Enable gunicorn sub-command if gunicorn is available.
 
 try:

@@ -1,4 +1,5 @@
 {% load mapping_tags %}
+{% load staticfiles %}
 <!doctype html>
 <html>
     <head>
@@ -7,7 +8,7 @@
         <meta name="viewport" content="width=device-width,
             initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,
             user-scalable=no">
-        <link rel="stylesheet" href="/static/css/site.css">
+        <link rel="stylesheet" href="{% static 'css/site.css' %}">
         <style>
             body {
                 padding: 2em 4em;
@@ -29,8 +30,8 @@
             }
         </style>
 
-        <script src="/static/scripts/lib/require.js"></script>
-        <script src="/static/scripts/require_config.js"></script>
+        <script src="{% static 'scripts/lib/require.js' %}"></script>
+        <script src="{% static 'scripts/require_config.js' %}"></script>
         <script>
             require(['site/maps_test'], function (MapsTest) {
                 var maps_test = new MapsTest();

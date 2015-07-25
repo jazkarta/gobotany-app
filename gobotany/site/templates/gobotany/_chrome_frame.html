@@ -1,7 +1,8 @@
+{% load staticfiles %}
         {# Prompt about browser compatibility on IE 9 and below if needed #}
         <!--[if lt IE 10]>
         <script type="text/javascript"
-            src="/static/scripts/util/chrome_frame.js"></script>
+            src="{% static 'scripts/util/chrome_frame.js' %}"></script>
         <div id="ie-note">
             <p>Welcome to Go Botany! This site runs best using
             <a
@@ -16,7 +17,7 @@
             <p class="dismiss"><a 
                 title="Skip upgrading this time"
                 href="javascript:dismiss_gcf_install();">Skip</a></p>
-            <img src="/static/images/branding/logo-toplevel.png" alt="">
+            <img src="{% static 'images/branding/logo-toplevel.png' %}" alt="">
         </div>
         <script>
             // If the user asked to hide the message for this

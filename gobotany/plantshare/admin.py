@@ -9,9 +9,9 @@ from gobotany.plantshare import models
 class _Base(admin.ModelAdmin):
     class Media:
         css = {
-            'all': ('/static/admin/admin_gb.css',)
+            'all': ('admin/admin_gb.css',)
         }
-        js = ('/static/admin/admin_gb.js',)
+        js = ('admin/admin_gb.js',)
 
 
 class QuestionAdminForm(forms.ModelForm):

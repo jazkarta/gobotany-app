@@ -1,4 +1,5 @@
 {% load gobotany_tags %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html>
@@ -7,10 +8,9 @@
         <meta name="viewport" content="width=device-width,
         initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         {% block css %}
-            {% with '/static/css/site.css' as file_path %}
+            {% static 'css/site.css' as file_path %}
                 <link rel="stylesheet"
                     href="{{ file_path }}?v={% file_version file_path %}">
-            {% endwith %}
         {% endblock %}
         
         {% include "gobotany/_script_constants.html" %}
