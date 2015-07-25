@@ -269,7 +269,7 @@ if S3_STATIC:
     # Access information for the S3 bucket
     AWS_PRELOAD_METADATA = True
     STATICFILES_STORAGE = 'gobotany.s3utils.StaticRootS3BotoStorage'
-    STATIC_URL = ('http://' + AWS_STORAGE_BUCKET_NAME +
+    STATIC_URL = ('//' + AWS_STORAGE_BUCKET_NAME +
                   '.s3.amazonaws.com/static/')
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
     AWS_HEADERS = {
