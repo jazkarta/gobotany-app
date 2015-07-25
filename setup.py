@@ -50,6 +50,7 @@ requirements = [
     'newrelic',
     's3cmd',
     'django-sslify>=0.2',
+    'Collectfast==0.2.1',
     ]
 
 dependency_links = [

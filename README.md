@@ -121,6 +121,27 @@ Botany site's search field:
     heroku run django-admin.py rebuild_index --noinput
 
 
+Serving static files from S3
+----------------------------
+
+If you would like to server static/admin assets from S3 or Cloudfront directly
+instead of from Heroku's dynamic webserver you need to set a couple
+environment variables.  First you need to set your local AWS variables and
+export the files to S3:
+
+    export AWS_ACCESS_KEY_ID=...
+    export AWS_SECRET_ACCESS_KEY=...
+    export AWS_STORAGE_BUCKET_NAME=newfs
+    export S3_STATIC=True
+    dev/django collectstatic
+
+To let Heroku we want to serve these files from S3 and to avoid having it run
+time-consuming collectstatic on every deploy, we need the following settings:
+
+    heroku config:add S3_STATIC=True
+    heroku config:add DISABLE_COLLECTSTATIC=1
+
+
 Running the automated tests
 ---------------------------
 
