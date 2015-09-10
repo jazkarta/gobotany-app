@@ -1035,17 +1035,17 @@ class CopyrightHolder(models.Model):
     coded_name = models.CharField(max_length=50, unique=True)
     expanded_name = models.CharField(max_length=100)
     copyright = models.CharField(max_length=300)
-    source = models.CharField(max_length=300)
-    contact_info = models.CharField(max_length=300)
+    source = models.CharField(max_length=300, blank=True)
+    contact_info = models.CharField(max_length=300, blank=True)
 
     # Additional fields, imported as text.  These may need to change later.
-    primary_bds = models.CharField(max_length=300)
-    date_record = models.CharField(max_length=300)
+    primary_bds = models.CharField(max_length=300, blank=True)
+    date_record = models.CharField(max_length=300, blank=True)
     last_name = models.CharField(max_length=300)
-    permission_source = models.CharField(max_length=300)
-    permission_level = models.CharField(max_length=300)
-    permission_location = models.CharField(max_length=300)
-    notes = models.CharField(max_length=1000)
+    permission_source = models.CharField(max_length=300, blank=True)
+    permission_level = models.CharField(max_length=300, blank=True)
+    permission_location = models.CharField(max_length=300, blank=True)
+    notes = models.CharField(max_length=1000, blank=True)
 
     def __unicode__(self):
         unicode_string = u'%s: %s. Copyright: %s.' % (self.coded_name,
