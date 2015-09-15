@@ -1691,6 +1691,8 @@ class Importer(object):
                 row[status_column_name])
             distribution.get(
                 scientific_name=row['scientific_name'],
+                species_name=row['species_name'],
+                subspecific_epithet=row['subspecific_epithet'],
                 state=row['state'],
                 county=row['county'],
                 ).set(
@@ -2358,7 +2360,7 @@ def zipimport(name):
         print 'Calling', function.__name__ + '()'
         print
 
-        wrapped_function = transaction.commit_on_success(function)
+        wrapped_function = transaction.atomic(function)
         try:
             wrapped_function(*args)
         except CannotOpen as e:
@@ -2507,7 +2509,7 @@ def main():
     if hasattr(args, 'filenames'):
         function_args.extend(PlainFile('.', f) for f in args.filenames)
 
-    wrapped_function = transaction.commit_on_success(function)
+    wrapped_function = transaction.atomic(function)
     wrapped_function(*function_args)
 
 if __name__ == '__main__':
