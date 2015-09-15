@@ -61,7 +61,7 @@ def _taxon_image(image):
     return json
 
 def _simple_taxon(taxon, pile_slug=None, include_default_image=False,
-    include_factoid=False):
+                  include_factoid=False):
 
     genus_name, epithet = taxon.scientific_name.lower().split(None, 1)
     url = reverse('taxa-species', args=(genus_name, epithet))
@@ -106,7 +106,8 @@ def _species_simple_taxon(taxon, pile_slug):
         }
 
 def _taxon_with_chars(taxon):
-    res = _simple_taxon(taxon)
+    res = _simple_taxon(taxon, include_default_image=True,
+                        include_factoid=True)
     piles = taxon.piles.all()
     res['piles'] = [pile.name for pile in piles]
     res['pile_slugs'] = [pile.slug for pile in piles]
