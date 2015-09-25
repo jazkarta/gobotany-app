@@ -843,10 +843,13 @@ results_page_init: function(args) {
                     return character.character_group === character_group_name
                         && ! _.contains(displayed_slugs, character.short_name);
                 }).length;
-                if (numleft === 0)
+                if (numleft === 0) {
                     $(input).prop('disabled', true).attr('checked', false);
-                else
+                    // We hide exhausted groups, since disabled widget is not clear in all browsers
+                    $(input).parents('li').hide();
+                } else {
                     $(input).prop('disabled', false);
+                }
             });
         });
     };
