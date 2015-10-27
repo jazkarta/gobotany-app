@@ -36,14 +36,21 @@ define([
         });
 
         _.each(glossaryblob.definitions, function(definition, term) {
+            term = term.trim();
             var eterm = exports.escape(term);
 
             /* Lower-case terms can also start with an upper-case letter. */
 
             if (/^[a-z]/.test(eterm)) {
-                var e0 = '[' + eterm[0] + eterm[0].toUpperCase() + ']';
-                var rest = eterm.slice(1);
-                eterm = e0 + rest;
+                var parts = [],
+                    words = eterm.split(' ');
+                for (var i in words) {
+                    var word = words[i];
+                    var e0 = '[' + word[0] + word[0].toUpperCase() + ']';
+                    var rest = word.slice(1);
+                    parts.push(e0 + rest);
+                }
+                eterm = parts.join(' ');
             }
 
             /* Terms that end with a letter should end at a word boundary. */
