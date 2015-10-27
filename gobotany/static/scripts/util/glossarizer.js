@@ -44,7 +44,7 @@ define([
             if (/^[a-z]/.test(eterm)) {
                 var parts = [],
                     words = eterm.split(' ');
-                for (var i in words) {
+                for (var i = 0; i < words.length; i++) {
                     var word = words[i];
                     var e0 = '[' + word[0] + word[0].toUpperCase() + ']';
                     var rest = word.slice(1);
