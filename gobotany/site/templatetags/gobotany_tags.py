@@ -5,10 +5,10 @@ import re
 from hashlib import md5
 
 from django import template
+from django.conf import settings
 from django.core.urlresolvers import NoReverseMatch, reverse
 from django.template.defaultfilters import slugify, stringfilter
 
-from gobotany import settings
 from gobotany.version import get_version
 from gobotany.core import models as core_models
 from gobotany.dkey import models as dkey_models
@@ -23,11 +23,18 @@ def file_version(file_path):
     """Return a version string for a file path based on the file contents.
     Intended for use with auto-versioning CSS and JS files via query string.
     """
-    file = ''.join([settings.PROJECT_ROOT, file_path])
-    try:
-        digest = md5(open(file, 'rb').read()).hexdigest()
-    except:
-        digest = ''
+    file_path = file_path.lstrip('/')
+    paths = settings.STATICFILES_DIRS
+    digest = ''
+    for path in paths:
+        path = path.rstrip('/')
+        full_path = '/'.join([path, file_path])
+        try:
+            with open(full_path, 'rb') as f:
+                digest = md5(f.read()).hexdigest()
+            break
+        except:
+            continue
     return digest[:8]
 
 @register.simple_tag()
