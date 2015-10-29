@@ -10,7 +10,7 @@
         {% block css %}
             {% static 'css/site.css' as file_path %}
                 <link rel="stylesheet"
-                    href="{{ file_path }}?v={% file_version file_path %}">
+                    href="{{ file_path }}?v={% file_version 'css/site.css' %}">
         {% endblock %}
         
         {% include "gobotany/_script_constants.html" %}
