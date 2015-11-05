@@ -2451,6 +2451,8 @@ def add_subcommand(subs, name, function):
                          nargs='*')
 
 def main():
+    import django
+    django.setup()
     start_logging()
     importer = Importer()
 
