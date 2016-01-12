@@ -1241,7 +1241,7 @@ class Importer(object):
         already_seen = {}
 
         for line in ls:
-            image_path = re.split(' s3://\w+/', line)[1].strip()
+            image_path = re.split(' s3://[-\w]+/', line)[1].strip()
             dirname, filename = image_path.rsplit('/', 1)
             if '.' not in filename:
                 log.error('  file lacks an extension: %s', filename)
@@ -2296,7 +2296,11 @@ def get_data_fileopener(name):
     if name is None:
         print 'Searching S3 for the most recent data zip file ...'
         directories, filenames = default_storage.listdir('/data/')
-        name = sorted([ f for f in filenames if f.endswith('.zip') ])[-1]
+        names = sorted([ f for f in filenames if f.endswith('.zip') ])
+        if not names:
+            print >>sys.stderr, 'No files available'
+            sys.exit(1)
+        name = names[-1]
         print 'Most recent data zip file is:'
         print
         print '   ', name
