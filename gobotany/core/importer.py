@@ -1241,7 +1241,7 @@ class Importer(object):
         already_seen = {}
 
         for line in ls:
-            image_path = re.split(' s3://\w+/', line)[1].strip()
+            image_path = re.split(' s3://[-\w]+/', line)[1].strip()
             dirname, filename = image_path.rsplit('/', 1)
             if '.' not in filename:
                 log.error('  file lacks an extension: %s', filename)
@@ -1691,6 +1691,8 @@ class Importer(object):
                 row[status_column_name])
             distribution.get(
                 scientific_name=row['scientific_name'],
+                species_name=row['species_name'],
+                subspecific_epithet=row['subspecific_epithet'],
                 state=row['state'],
                 county=row['county'],
                 ).set(
@@ -2294,7 +2296,11 @@ def get_data_fileopener(name):
     if name is None:
         print 'Searching S3 for the most recent data zip file ...'
         directories, filenames = default_storage.listdir('/data/')
-        name = sorted([ f for f in filenames if f.endswith('.zip') ])[-1]
+        names = sorted([ f for f in filenames if f.endswith('.zip') ])
+        if not names:
+            print >>sys.stderr, 'No files available'
+            sys.exit(1)
+        name = names[-1]
         print 'Most recent data zip file is:'
         print
         print '   ', name
@@ -2358,7 +2364,7 @@ def zipimport(name):
         print 'Calling', function.__name__ + '()'
         print
 
-        wrapped_function = transaction.commit_on_success(function)
+        wrapped_function = transaction.atomic(function)
         try:
             wrapped_function(*args)
         except CannotOpen as e:
@@ -2449,6 +2455,8 @@ def add_subcommand(subs, name, function):
                          nargs='*')
 
 def main():
+    import django
+    django.setup()
     start_logging()
     importer = Importer()
 
@@ -2507,7 +2515,7 @@ def main():
     if hasattr(args, 'filenames'):
         function_args.extend(PlainFile('.', f) for f in args.filenames)
 
-    wrapped_function = transaction.commit_on_success(function)
+    wrapped_function = transaction.atomic(function)
     wrapped_function(*function_args)
 
 if __name__ == '__main__':
