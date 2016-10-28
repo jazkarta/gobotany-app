@@ -1,3 +1,4 @@
+import re
 import string
 from collections import defaultdict, OrderedDict as odict
 from datetime import datetime
@@ -17,6 +18,7 @@ from tinymce import models as tinymce_models
 
 # Character short names common to all piles (no suffix)
 COMMON_CHARACTERS = ['habitat', 'habitat_general', 'state_distribution']
+MULTI_SPACE_RE = re.compile(r'\s{2,}')
 
 
 def add_suffix_to_base_directory(image, suffix):
@@ -104,6 +106,16 @@ class GlossaryTerm(models.Model):
 
     def __unicode__(self):
         return u'%s: %s' % (self.term, self.lay_definition)
+
+    def full_clean(self, exclude=None, validate_unique=True):
+        super(GlossaryTerm, self).full_clean(exclude=None,
+                                             validate_unique=True)
+        term = self.term
+        term = term.strip()
+        term = MULTI_SPACE_RE.sub(u' ', term)
+        if self.term != term:
+            self.term = term
+
 
 
 class Character(models.Model):
